@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Upload file with multer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--  SINGLE FILE -->
+    <section>
+      <h3>upload single file</h3>
+      <form action="/uploadfile" enctype="multipart/form-data" method="POST">
+        <input type="file" name="myFile" />
+        <input type="submit" value="Upload a file" />
+      </form>
+    </section>
+    <br />
+    <!-- MULTIPLE FILES -->
+    <section>
+      <h3>upload multiple files</h3>
+      <form
+        action="/uploadmultiple"
+        enctype="multipart/form-data"
+        method="POST"
+      >
+        Select images: <input type="file" name="myFiles" multiple />
+        <input type="submit" value="Upload your files" />
+      </form>
+    </section>
+    <br />
+  </body>
+</html>
